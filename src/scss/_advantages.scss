@@ -1,0 +1,31 @@
+.advantages {
+
+    &__title {
+        margin-top: 33px;
+        @include h2;
+    }
+    &__label {
+        @include label__dark;
+    }
+    &__subtitle {
+        font-weight: 400;
+        font-size: 17px;
+        text-align: center;
+        
+    }
+    padding-top: 42px;
+    background-image: url('../../assets/img/bg.png');
+    padding-bottom: 80px;
+    &__wrapper {
+        justify-content: center;
+        margin-top: 3.2rem;
+        display: grid;
+        grid-template-columns: repeat(3 , 320px);
+        grid-template-rows: repeat(2, 280px);
+        gap: 6.7rem;
+        
+    }
+    &__item img {
+        width: 100%;
+    }
+}

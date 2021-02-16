@@ -1,6 +1,62 @@
 * {
     font-family: 'Roboto',sans-serif;
 }
-@import "mixins";
-@import "general";
-@import "media";
+:root {
+    font-size: 10px;
+}
+body, html {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: relative;
+}
+nav {
+    height: 50px;
+    background-color:#212121;
+}
+
+
+.modal__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style-type: none;
+}
+dl, ol, ul {
+    margin: 0;
+    padding:0;
+    display: block;
+    list-style-type: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0
+    
+}
+* {
+    font-family: 'Roboto',sans-serif;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px; 
+}
+
+
+
+@import 'mixins';
+@import 'general';
+@import 'footer';
+@import 'hamburger';
+@import 'modal';
+@import 'advantages'; 
+@import 'media';

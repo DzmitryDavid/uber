@@ -1,4 +1,35 @@
+// 
 @media (max-width: 1199px) {
+    .container {
+        width: 992px;
+
+    }
+    .advantages {
+        &__wrapper {
+            gap: 2rem;
+        }
+    }
+    .links {
+        &__main {
+            width: 300px;
+        }
+        &__sub {
+            width: 370px;
+            line-height: 35px;
+        }
+    }
+    
+    .world {
+        height: 400px;
+    }
+    .cities {
+        margin-top: 150px;
+    }
+    .promo {
+        &__header {
+            font-size: 50px;
+        }
+    }
     .menu {
         &__item {
             padding-right: 20px;
@@ -7,25 +38,33 @@
             font-size: 13px;
         }
     }
-    .promo {
-        &__header {
-            font-size: 50px;
+    .xs-visible  {
+        display: none;
+    }
+    
+}
+@media (max-width: 991px) {
+    .container {
+        width: 768px;
+    }
+    .terms {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .advantages {
+        padding: 2rem 0 2rem 0;
+        &__wrapper {
+            gap: 3rem;
+            grid-template-columns: repeat(2, 320px);
         }
     }
     .reasons {
-        &__block {
-            align-items: flex-start;
-        }
-        &__round {
-            margin-right: 0;
-        }
-        &__descr {
-            width: 300px;
-        }
+        padding: 2rem 0 2rem 0;
+        
     }
-} 
-@media (max-width: 991px) {
     .menu {
+        display: none;
         &__item {
             padding-right: 8px;
         }
@@ -33,6 +72,53 @@
             font-size: 10px;
         }
     }
+    .footer {
+        &__container {
+            margin-top: 2rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__divider {
+            width: 160px;
+        }
+        &__mobile {
+            text-align: right;
+            margin-top: 2rem;
+            img {
+                width:30%;
+            }
+        }
+    }
+    .links {
+        &__main {
+            margin-top: 2rem;
+            width: 300px;
+        }
+        &__sub {
+            width: 370px;
+            line-height: 35px;
+        }
+    }
+    .modal {
+        width: 50%;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+    .container {
+        width: 768px;
+    }
+    
+    .advantages {
+        &__wrapper {
+            gap: 3rem;
+            grid-template-columns: repeat(2, 320px);
+        }
+    }
+    
     .subheader {
         &__logo img {
             width: 100%;
@@ -67,8 +153,61 @@
             width: 300px;
         }
     }
+    .terms {
+        padding: 30px 0;
+    }
+    .advantages {
+        padding-bottom: 30px;
+    }
+    .every__day {
+        min-height: 300px;
+    }
+    .adv__block {
+        & img {
+            width: 100%;
+        }
+    }
+    .choice__img {
+        & img {
+            width: 80%;
+        }
+    }
+    .footer {
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+        &__mobile {
+            text-align: center;
+        }
+    }
+    
+    .social {
+        margin: 0 auto;
+    }
+    .links {
+        &__main {
+            width: 300px;
+        }
+        &__sub {
+            width: 370px;
+            line-height: 35px;
+        }
+    }
 }
+
 @media (max-width: 767px) {
+    .container {
+        width: 567px;
+    }
+    .modal {
+        width: 66%;
+    }
+    .advantages {
+        &__wrapper {
+            grid-template-columns: 320px;
+        }
+    }
     .menu {
         position: fixed;
         z-index: 2;
@@ -97,38 +236,13 @@
             font-size: 20px;
             }
     }
-    .hamburger {
-        display: block;
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 26px;
-        height: 12px;
-
-        & span {
-            transition: .5s all;
-            display: block;
-            width: 100%;
-            height: 2px;
-            background-color: #fff;
-            margin-top: 2px;
+    .links {
+        &__main {
+            width: 300px;
         }
-        &-active {
-            span {
-                transition: .5s all;
-                margin-top: -2px;
-                &:first-child {
-                    transform:  translateY(3px) rotate(-45deg);
-                }
-                &:nth-child(2) {
-                    display: none;
-                }
-                &:nth-child(3) {
-                    transform: translateY(3px) rotate(45deg);
-
-                }
-            }
+        &__sub {
+            width: 370px;
+            line-height: 35px;
         }
     }
     .xs-hidden {
@@ -136,6 +250,16 @@
     }
     .xs-visible {
         display: block;
+    }
+    .terms {
+        padding: 20px 0 20px 0;
+        &__title {
+            font-size: 17px;
+            &-red {
+                margin-top: 10px;
+                font-size: 17px;
+            }
+        }
     }
     .subheader {
         &__phone {
@@ -152,16 +276,33 @@
             height: 40px;
             margin: 0 auto;
             margin-top: 10px;
-
         }
     }
     .promo {
         &__header {
             line-height: 45px;
+            font-size: 36px;
+        }
+        &__subheader {
+            font-size: 29px;
+        }
+    }
+    .choice {
+        img {
+            width: 100%;
+        }
+    }
+  
+    .adv__block {
+        & img {
+            width: 100%;
         }
     }
 }
 @media (max-width: 575px) {
+    .container {
+        width: 100%;
+    }
     nav {
         height: 30px;
     }
@@ -209,8 +350,6 @@
             line-height: 30px;
         }
         &__btn button {
-            width: 210px;
-            height:50px;
             
             margin-top: 72px;
 
@@ -249,6 +388,103 @@
         font-size: 16px;
         margin-top: 15px;
         line-height: 16px;
+        &__choice {
+            margin-top: 10px;
+            line-height: 30px;
+            font-size: 27px;
+            
+        }
+    }
+    .choice__img img {
+        width: 100%;
+    }
+    .adv__block {
+        margin-top: 15px;
+        img {
+            width: 100%;
+        }
+    }
+    .advantages {
+        &__wrapper {
+            gap: 1.5rem;
+        }
+        padding-bottom: 30px;
+    }
+    .content {
+        padding-top: 20px;
+    }
+    .every__day {
+        min-height: 120px;
+    }
+    .terms {
+        padding: 20px 0 20px 0;
+        &__title {
+            font-size: 17px;
+            &-red {
+                margin-top: 10px;
+                font-size: 17px;
+            }
+        }
+        &__list {
+            font-size: 15px;
+        }
+        &__subtitle {
+            font-size: 17px;
+        }
+    }
+    .world {
+        height: 500px;
+        &__container {
+            width:100%;
+            padding: 30px 0 30px 0;
+        }
+        &__title {
+            font-size: 30px;
+            margin-top: 25px;
+        }
+        &__subtitle {
+            margin-top: 10px;
+        }
+    }
+    .cities {
+        margin-top: 270px;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+
+    .modal__menu li a {
+        font-size: 21px;
 
     }
+    .modal__menu { 
+        padding: 20px;
+        align-items: flex-start;
+    }
+    .footer {
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+        &__mobile {
+            text-align: center;
+        }
+    }
+    
+    .links {
+        &__main {
+            width: 300px;
+        }
+        &__sub {
+            margin-top: 2rem;
+            width: 100%;
+            line-height: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        
+        }
+        
+    }
+
 }

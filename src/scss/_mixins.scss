@@ -1,3 +1,5 @@
+$color-primary:#1eacc7;
+
 @mixin label__dark {
     margin: 0 auto;
     height: 24px;
@@ -44,6 +46,12 @@
     text-transform: uppercase;
     &:hover {
         background-image: none;
-        background-color: #1eacc7;
+        background-color: $color-primary;
     }
+}
+.label {
+    @include label__dark;
+}
+.title {
+    @include h2;
 }

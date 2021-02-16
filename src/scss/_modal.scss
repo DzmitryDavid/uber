@@ -1,0 +1,93 @@
+.modal {
+    display: block;
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 25%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    transition: 0.5s ease all;
+
+    transform:  translate(-100%);
+    visibility: hidden;
+
+    &__menu {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+    
+        li {
+            margin-top: 3rem;
+            a {
+                color:$color-primary;
+                font-size: 26px;
+                &:hover {
+                    color:#fff;
+                }
+            }
+        }
+    }
+    &__hamburger {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        transform: translateY(-50%);
+        width: 26px;
+        height: 12px;
+        transition: 0.5s ease all;
+        &:hover {
+            transform: scale(1.25);
+            cursor: pointer;
+            transition: 0.5s all;
+        }
+        
+        & span {
+            transition: 0.5s all;
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            margin-top: 2px;
+            
+        }
+        &-active {
+            span {
+                transition: 0.5s all;
+                margin-top: -2px;
+                &:first-child {
+                    transform:  translateY(3px) rotate(-45deg);
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+                &:nth-child(3) {
+                    transform: translateY(3px) rotate(45deg);
+                }
+            }
+        }
+    }
+}
+
+.overlay {
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    visibility: hidden;
+    
+}
+.show {
+    transition: all 0.5s ease;
+    transform: translate(0%);
+    visibility: visible !important;
+}
+.hide {
+    overflow: hidden;
+}
